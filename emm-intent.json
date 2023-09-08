@@ -1,0 +1,17 @@
+{
+    "version": 1.0,
+    "emms": {
+        "Airwatch": {
+            "displayName": "Airwatch Intelligent Hub",
+            "intent": "mode=explicit,broadcast=true,action=datalogic.scan2deploy.intent.action.START_SERVICE,package=com.datalogic.scan2deploy,class=com.datalogic.scan2deploy.S2dServiceReceiver,extraString=encoding=%encoding%,extraString=data=%data%"
+        },
+        "MobiControl": {
+            "displayName": "SOTI MobiControl",
+            "intent": "sendIntent -b \"intent:#Intent;component=com.datalogic.scan2deploy/.S2dServiceReceiver;action=datalogic.scan2deploy.intent.action.START_SERVICE;S.encoding=%encoding%;S.data=%data%;end\""
+        },
+        "SureMDM": {
+            "displayName": "SureMDM",
+            "intent": "am start -S -n com.datalogic.scan2deploy/.MainActivity -e data %data%"
+        }
+    }
+}
