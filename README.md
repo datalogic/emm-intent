@@ -2,15 +2,16 @@
 Configurable intents to be copied from Scan2Deploy Studio
 
 ## Format
-The required properties for new EMM entries are:
- * `displayName`: Label displayed to the user for selection
+The required properties for EMM entries are:
+ * `displayName`: Label displayed to the user for copy selection
  * `intent`: Structured intent for EMM (see [Configuring intents](#configuring-intents))
 
 Example:
 ```diff
 {
-  "version": "X.X.X",
+  "version": X.X,
   "emms": {
+     ...
 -    "existingEmm": {}
 +    "existingEmm": {},
 +    "newEmm": {
@@ -30,12 +31,12 @@ There are two placeholders that can be used to define where the corresponding da
 
 #### Example
 Given the following:
- * intent definition: "intent -encoding %encoding% -data %data%"
+ * intent definition: "intent --encoding %encoding% --data %data%"
  * Studio barcode version: "v3"
  * Studio barcode data: "T3yYK0x8dt"
 
 Resulting intent: 
-`intent -encoding v3 -data T3yYK0x8dt`
+`intent --encoding v3 --data T3yYK0x8dt`
 
 ## Submitting changes
 To modify the emm-intents.json file, follow these steps:
